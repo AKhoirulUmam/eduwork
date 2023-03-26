@@ -1,4 +1,4 @@
-let length = 16; //  data 
+let length = 16; //  Number 
 
 let last name = "Johnson" //  String
 
