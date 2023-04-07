@@ -19,6 +19,7 @@ describe('Navbar Test', function(){
        cy.get("input[name=submit]").click();
 
 
+
 });
 });
 
