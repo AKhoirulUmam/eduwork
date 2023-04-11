@@ -7,10 +7,11 @@ describe('Searchbox Test',()=>{
 
     it('Should type into searchbox and submit',()=>{
         cy.get('#searchTerm').type('Online Banking{enter}')
-    });
 
-    it('Should type into searchbox and submit',()=>{
+        cy.contains('Online Banking').click();
+
         cy.get('#searchTerm').type('Online Statements{enter}')
+
     });
 
 });
