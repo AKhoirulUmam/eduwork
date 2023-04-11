@@ -13,6 +13,8 @@ describe("logout", function(){
       cy.contains('username').click();
         
       cy.get("#logout_link").click();
+        
+      cy.get("strong").should("contains.text","Home");
       });
     
 });
