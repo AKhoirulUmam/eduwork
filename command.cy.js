@@ -1,15 +1,14 @@
-describe("login with fixtures data",function(){
+describe('Custom Commands',function(){
 
-  it('Should try to login',function() {
+  it('Should load login page',function(){
 
-      cy.visit("https://www.saucedemo.com/");
-      cy.fixture("user").then(data => {
-        cy.login(
-          data.daftar_user.standard.username,
-          data.daftar_user.standard.password,
-        );
+      cy.visit('http://zero.webappsecurity.com/bank/pay-bills.html');
+      
+      cy.login('username','password');
     
-        cy.url().should("include", "inventory.html");
-      })
-    })
-  })
+      cy.contains('Pay Bills')
+
+
+      });
+    });
+ 
