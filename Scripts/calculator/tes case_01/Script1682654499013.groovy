@@ -17,23 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\Acer\\Documents\\UDUAPP\\Calculator_v8.1 .apk', true)
+Mobile.startApplication('C:Users/Acer/Document/EDUAPP/Calculator_v8.1apk', false)
 
-Mobile.checkElement(findTestObject(null), 0)
+Mobile.tap(findTestObject('android.widget.Button - 7'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - 7 (1)'), 0)
+Mobile.tap(findTestObject('android.widget.Button -x'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.Button -'), 0)
+Mobile.tap(findTestObject('android.widget.Button - 8'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - 8 (1)'), 0)
+Mobile.tap(findTestObject('android.widget.Button --'), 0)
 
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - (1)'), 0)
-
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - (2)'), 0)
-
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - 2'), 0)
-
-Mobile.tap(findTestObject('Object Repository/android.widget.Button - AC (1)'), 0)
+Mobile.tap(findTestObject('android.widget.Button - AC'), 0)
 
 Mobile.closeApplication()
 
