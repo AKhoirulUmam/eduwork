@@ -1,14 +1,14 @@
 describe("POST /api/users",function(){
-    it("Berhasil create user", function(){
+    it("Berhasil post user", function(){
         const requestBody={
            username:"standard_user",password:"secret_sauce"};
 
-        cy.request("POST","https://reqres.in/api/users",requestBody).then(
+        cy.request("POST","https://auth-eduwork.free.beeceptor.com/login",requestBody).then(
             (response)=>{
-                expect(response.status).to.eq(201);
+                expect(response.status).to.eq(200);
 
-                expect(response.body.username).to.eq(requestBody.username);
-                expect(response.body.password).to.eq(requestBody.password);
+                expect(response.body. username).to.eq(requestBody.standard_user);
+                expect(response.body.password).to.eq(requestBody.secret_sauce);
             }
         )
     })
