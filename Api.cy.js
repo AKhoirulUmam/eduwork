@@ -65,12 +65,17 @@ describe('Get Users todos', () => {
    })
 })
 
- describe('UPDATE Users ', () => {
-    it('berhasil Update data users', () => {
-        cy.request({
-            method: 'PUT',
-            url: 'https://reqres.in/api/users/1',
-          }).as('users')
-          cy.get('@users').its('status').should('equal', 200)
-    });
+  describe('Update user', () => {
+    it('Update new user', () => {
+    const requestBody={
+        name:"Umam",
+        job:"QualityAssurance"
+    };
+    cy.request('PUT', 'https://reqres.in/api/users/1', requestBody).then((response) => {
+        
+        expect(response.status).to.eq(200);
+       expect(response.body.name).to.equal(requestBody.name);
+        expect(response.body.job).to.equal(requestBody.job);
+    })
+})
  });
